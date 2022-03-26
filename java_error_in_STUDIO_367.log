@@ -1,0 +1,32 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007cd208f2313a, pid=367, tid=1611
+#
+# JRE version: OpenJDK Runtime Environment (11.0.8) (build 11.0.8+0-b944-P17168821)
+# Java VM: OpenJDK 64-Bit Server VM (11.0.8+0-b944-6842174, mixed mode, tiered, compressed oops, g1 gc, linux-amd64)
+# Problematic frame:
+# C  [libjimage.so+0x813a]  ImageFileReader::find_location_index(char const*, unsigned long long*) const+0x8a
+#
+# Core dump will be written. Default location: Core dumps may be processed with "/sbin/crash_reporter --user=%P:%s:%u:%g:%f" (or dumping to /home/adesanya/core.367)
+#
+# If you would like to submit a bug report, please visit:
+#   https://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Xms256m -Xmx1280m -XX:ReservedCodeCacheSize=240m -XX:+UseG1GC -XX:SoftRefLRUPolicyMSPerMB=50 -XX:CICompilerCount=2 -Dsun.io.useCanonPrefixCache=false -Djdk.http.auth.tunneling.disabledSchemes="" -Djdk.attach.allowAttachSelf=true -Dkotlinx.coroutines.debug=off -Djdk.module.illegalAccess.silent=true -Djna.nosys=true -Djna.boot.library.path= -Didea.vendor.name=Google -Dawt.useSystemAAFontSettings=lcd -Dsun.java2d.renderer=sun.java2d.marlin.MarlinRenderingEngine -Dsun.tools.attach.tmp.only=true -XX:ErrorFile=/home/adesanya/java_error_in_STUDIO_%p.log -XX:HeapDumpPath=/home/adesanya/java_error_in_STUDIO.hprof -Didea.paths.selector=AndroidStudio4.2 -Djb.vmOptionsFile=/opt/android-studio/bin/studio64.vmoptions -Didea.platform.prefix=AndroidStudio -Didea.jre.check=true com.intellij.idea.Main
+
+Host: x86_64, 2 cores, 2G, Debian GNU/Linux 10 (buster)
+Time: Tue Jul 13 12:02:01 2021 WAT elapsed time: 8512 seconds (0d 2h 21m 52s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007cd1ec008000):  JavaThread "XToolkt-Shutdown-Thread" [_thread_in_vm, id=1611, stack(0x00007cd1da2c3000,0x00007cd1da3c4000)]
+
+Stack: [0x00007cd1da2c3000,0x00007cd1da3c4000],  sp=0x00007cd1da3c1120,  free space=1016k
+Native frames: (J=compiled Java code, A=aot compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libjimage.so+0x813a]  ImageFileReader::find_location_index(char const*, unsigned long long*) const+0x8a
+C  [libjimage.so+0x8658]  JIMAGE_FindResource+0xb8
+V  [libjvm.so+0x556117]
